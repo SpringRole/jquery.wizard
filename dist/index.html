@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        Wizard JS Example
+        <link rel='stylesheet' href='../wizard.css'>
+    </head> 
+    <body>
+        <h1>Default Template:</h1>
+            <br>
+            <h2>Current Page : 1</h2>
+            <div class = 'wizard-section' currentPage='1'>
+            </div>
+            <br>
+            <h2>Current Page : 2</h2>
+            <div class = 'wizard-section' currentPage='2'>
+            </div>
+            <br>
+            <h2>Current Page : 3</h2>
+            <div class = 'wizard-section' currentPage='3'>
+            </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
+        <!-- <script src='../src/index.js'></script> -->
+        <script src='./wizard.js'></script>
+        <script>
+            $('.wizard-section').each(function(){
+                $(this).wizard({current_page:$(this).attr('currentPage')});
+            })
+        </script>
+    </body>
+</html>
